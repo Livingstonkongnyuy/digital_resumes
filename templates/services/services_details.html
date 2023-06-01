@@ -1,0 +1,187 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>services add</title>
+    <meta name="author" content="Zilo">
+    <link rel="canonical" href=""/>
+    <link rel="home" href=""/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- ================================
+    Start CSS
+    ================================= -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- ================================
+    End CSS
+    ================================= -->
+
+  </head>
+  <body>
+
+    <!-- ================================
+    Start Navigation Bar
+    ================================= -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-primary bg-primary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="{% url 'index' %}">Digital Resume</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'portfolio' %}">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'blog' %}">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'services' %}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+    
+    <!-- ================================
+    End Navigation Bar
+    ================================= -->
+
+    <!-- ================================
+    Start Content
+    ================================= -->
+    <section>
+      {% comment %} <div class="btn btn-primary" style="margin-left:110px; margin-top:-1px;"> {% endcomment %}
+        {% comment %} <a href="{% url 'blog' %}">Back</a> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+      <div class="innerPageBannerCol">
+        <div class="container">
+          <a class="btn btn-primary" href="{% url 'services' %}">Back</a>
+          <div class="row g-4 g-md-3  align-items-center">
+            <div class="col-md-6">
+              <div class="bannerContent">
+                <h1 class="xlTitle pb-md-3">{{services.title}}</h1>
+              </div>
+            </div>
+          </div>        
+          <div class="row">
+            {% comment %} <div class="col-md-auto"> {% endcomment %}
+              {% comment %} <div class="authorCol"> {% endcomment %}
+                {% comment %} <h4 class="smTitle pb-3">{{user.username}}</h4> {% endcomment %}
+              {% comment %} </div> {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+            {% comment %} <div class="col-md"> {% endcomment %}
+              {% comment %} <h4 class="smTitle pb-3">{{services.date_created}}</h4> {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+          </div>
+            <div class="col-md-0 order-1 float-left">
+              <img src="{{services.image.url}}" height="100%" width="100%" class="img-responsive" alt="">
+            </div>
+
+          </div>
+          <div class="mt-5">
+            <div class="container">
+              <p>{{services.content|linebreaks}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      
+      
+      
+      
+      
+    </section>
+    <!-- ================================
+    End Content
+    ================================= -->
+
+    <footer class="bg-light">
+      <div class="footerCol">
+        <div class="container">
+          <ul class="socialCol">
+            <li><a href="javascript:void(0)"><img src="{% static 'images/fb.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/insta.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/twitter.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/linkedin.svg' %}" alt="..."></a></li>
+          </ul>
+          <div class="copyrightCol">
+            <p>Powered by<a href="https://www.linkedin.com/company/zilotechnologiess" target="_blank"> <b style="font-size: 20px;"><i>Zilo</i></b></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ================================
+    End Footer
+    ================================= -->
+
+    <!-- ================================
+    Start Scripts
+    ================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  
+
+    <!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  </body>
+
+
+  <script>
+    var typed = new Typed('#typed', {
+      strings: $("#typed").attr("data-typed-items").split(","),
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+

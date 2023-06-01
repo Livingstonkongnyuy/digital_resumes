@@ -1,0 +1,198 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-primary bg-primary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="{% url 'index' %}">Digital Resume</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'portfolio' %}">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'blog' %}">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'services' %}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+
+<br><br><br><br>
+    <!-- ======= Resume Section ======= -->
+<section id="resume" class="resume">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <center>
+            <h2 class='md-5'><b><strong>My Resume</strong></b></h2>
+            {% comment %} <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> {% endcomment %}
+
+        </center>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <h2><i style="color: #007bff; margin-right: 10px;" class="fas fa-user"></i> Personal Details</h2>
+          <div class="resume-item pb-0">
+            {% comment %} <h4 class="">Kongnyuy Livingston</h4> {% endcomment %}
+            <p style="font-size: large;"><em></em></p>
+            <ul><b>
+              <li>Name: Kongnyuy livingston
+                <li>Email: kongnyuylivingstone@gmail.com</li>
+                <li>Phone: +237 672384579</li>
+              <li>Address:Bamenda</li>
+              <br>
+              </b>
+            </ul>
+          </div>
+          <h2><i style="color: #007bff; margin-right: 10px;" class="fas fa-graduation-cap"></i>Education</i></h2>
+          <div class="resume-item">
+            <h4>GCE Ordinary/ Advance Level Certificate</h4>
+            <h5>2013 - 2021</h5>
+            <p><em>Government Bilingual High School Tatum &amp; Goverment Bilingual High School Bafoussam</em></p>
+            <p>I spent five years at GBHS Tatum, where I obtained my GCE O level certificate with great achievements. I later migrated to GBHS Bafoussam to pursue my A level certificate.</p>
+          </div>
+          <div class="resume-item">
+            <h4>University of Bamenda</h4>
+
+            <h5>2021 - Present</h5>
+            <p><em>National Higher Polytechnic Institute (School of Engineering)</em></p>
+            After completing high school, I enrolled in this prestigious institution to study computer engineering and obtain a Bachelor's degree. The program offers a comprehensive curriculum. I have gained real-world experience through internships and projects, which have strengthened my skills and knowledge. I am passionate about technology and eager to contribute to the field. This program provides me with the opportunity to build a successful career in a constantly evolving industry that offers exciting opportunities for growth and innovation.          </div>
+        </div>
+
+
+        <div class="col-lg-6">
+          <h2><i style="color: #007bff; margin-right: 10px;" class="fas fa-briefcase"></i>Professional Experience</h2>
+          <div class="resume-item">
+            <h4>Full Stack Web developer</h4>
+            <h5>2022 - Present</h5>
+            {% comment %} <p><em>Experion, New York, NY </em></p> {% endcomment %}
+            <ul>
+              <li>I'm an experienced full-stack web developer skilled in modern technologies like Django, ASP.NET, HTML, CSS, Bootstrap, JavaScript & React. My expertise covers the entire web development process, from building servers to creating dynamic user interfaces. I create robust web apps that are functional and visually appealing, making me a valuable asset.</li>
+              <li>* Lead in the design, development, and implementation of the Student Learning Portal, Blog Application, Social Book, E-commerce etc, Coaching Website etc...</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Python Developer</h4>
+            <h5>2021 - Present</h5>
+            <ul>
+              <li>As a Python developer, i have a strong command of the Python programming language and skilled in developing applications and software using Python. I'm familiar with various Python libraries and frameworks, and have experience working on projects such as web applications, data analysis tools etc </li>
+            </ul>
+            
+            <div style="background-color: #fff;
+          border-radius: 4px;
+          margin-bottom: 20px;
+          padding: 20px;">
+          <h4><i class="fas fa-cogs"></i> Skills</h4>
+            <ul>
+              <li><b>FRONT-END</b>: HTML, CSS, JavaScript, Bootstrap, Tailwind, React.</li>
+              <li><b>BACK-END</b>: PYTHON-DJANGO, C#-ASP.NET</li>
+              <li><b>UI/UX designer</b></li>
+              <li><b>Teacher</b>:  Computer, Mathematics at Leader Corporation</li>
+              <div class="mt-3">
+                <li><b>Currently Learning</b>: Dart-Flutter, Database Management and Documentation</li>
+              </div>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Resume Section -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> {% endcomment %}
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> {% endcomment %}
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+
+
+    <footer>
+      <div class="footerCol">
+        <div class="container">
+          <ul class="socialCol">
+            <li><a href="javascript:void(0)"><img src="{% static 'images/fb.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/insta.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/twitter.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/linkedin.svg' %}" alt="..."></a></li>
+          </ul>
+          <div class="copyrightCol">
+            <p>Powered by<a href="https://www.linkedin.com/company/zilotechnologiess" target="_blank"> <b style="font-size: 20px;"><i>Zilo</i></b></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ================================
+    End Footer
+    ================================= -->
+
+    <!-- ================================
+    Start Scripts
+    ================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  
+  
+  </body>
+
+
+  {% comment %} <script> {% endcomment %}
+    {% comment %} var typed = new Typed('#typed', { {% endcomment %}
+      {% comment %} strings: $("#typed").attr("data-typed-items").split(","), {% endcomment %}
+      {% comment %} typeSpeed: 50, {% endcomment %}
+      {% comment %} backSpeed: 30, {% endcomment %}
+      {% comment %} loop: true {% endcomment %}
+    {% comment %} }); {% endcomment %}
+  {% comment %} </script> {% endcomment %}
+
+</html>
+
+  </body>
+</html>
+
+

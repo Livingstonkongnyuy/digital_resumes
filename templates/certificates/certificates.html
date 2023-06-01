@@ -1,0 +1,143 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio</title>
+    <meta name="author" content="Did Coding Limited & James Granger Design">
+    <link rel="canonical" href=""/>
+    <link rel="home" href=""/>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- ================================
+    Start CSS
+    ================================= -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- ================================
+    End CSS
+    ================================= -->
+
+  </head>
+  <body>
+
+    <!-- ================================
+    Start Navigation Bar
+    ================================= -->
+
+    <header>
+  <nav class="navbar navbar-expand-md navbar-primary bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="{% url 'index' %}">Digital Resume</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'portfolio' %}">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'blog' %}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'services' %}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+<div class="container">
+  {% if user.is_authenticated %}
+  <center>
+    <a style="margin:100px;" class="btn btn-primary" href="{% url 'add_certificate' %}">Add certficate</a>
+  </center>
+
+  {% else %}
+  <h3 style="margin:100px;" class="text-center text-primary">Certificates</h3>
+
+  {% endif %}
+
+</div>
+  
+<div style="margin-top:2x;" class="container">
+  <div class="row">
+    
+    {% for certificate in certificates reversed %}
+    <div class="col-sm-6 col-md-6 mb-4">
+      <div class="card bg-light">
+        <img width=200 height=250 class="card-img-top" src="{{ certificate.picture.url }}" alt="{{ portfolio.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ certificate.titles }}</h5>
+          <a href="{% url 'certificate_details' certificate.id %}" class="btn btn-primary btn-sm">Read more</a>
+
+        </div>
+          <div class="container">
+            {% if user.is_authenticated %}
+            <span>
+              <a class="btn btn-outline-primary btn-sm" href="{% url 'certificate_update' certificate.id %}">Update</a>
+              <a class="btn btn-outline-danger btn-sm" href="{% url 'certificate_delete' certificate.id %}">Delete</a>
+            </span>
+            {% endif %}
+          </div>
+          
+          
+      </div>
+    </div>
+    {% endfor %}
+    
+  </div>
+</div>
+
+
+    <!-- ================================
+    Start Footer
+    ================================= -->
+
+    <footer class="bg-light">
+      <div class="footerCol">
+        <div class="container">
+          <ul class="socialCol">
+            <li><a href="javascript:void(0)"><img src="{% static 'images/fb.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/insta.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/twitter.svg' %}" alt="..."></a></li>
+            <li><a href="javascript:void(0)"><img src="{% static 'images/linkedin.svg' %}" alt="..."></a></li>
+          </ul>
+          <div class="copyrightCol">
+            <p>Powered by<a href="https://www.linkedin.com/company/zilotechnologiess" target="_blank"> <b style="font-size: 20px;"><i>Zilo</i></b></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================================
+    End Footer
+    ================================= -->
+
+
+    <!-- ================================
+    Start JS
+    ================================= -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- ================================
+    End JS
+    ================================= -->
+
+  </body>
+</html>
